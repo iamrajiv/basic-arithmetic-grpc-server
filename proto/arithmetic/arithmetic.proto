@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package arithmetic;
+
+import "google/api/annotations.proto";
+
+// Defines the import path that should be used to import the generated package
+// and the package name
+option go_package = "github.com/iamrajiv/basic-arithmetic-grpc-server/proto;arithmetic";
+
+// Here is the overall arithmetic service definition where we define all our endpoints
+service Arithmetic {
+  rpc Add(Request) returns (Response){
+    option (google.api.http) = {
+      post: "/v1/arithmetic/add"
+      body: "*"
+    };
+  };
+  rpc Divide(Request) returns (Response){
+    option (google.api.http) = {
+      post: "/v1/arithmetic/div"
+      body: "*"
+    };
+  };
+  rpc Multiply(Request) returns (Response){
+    option (google.api.http) = {
+      post: "/v1/arithmetic/mul"
+      body: "*"
+    };
+  };
+  rpc Subtract(Request) returns (Response){
+    option (google.api.http) = {
+      post: "/v1/arithmetic/sub"
+      body: "*"
+    };
+  };
+}
+
+// The request message containing the two integers
+message Request {
+  int64 a = 1;
+  int64 b = 2;
+}
+
+// The response message containing the result
+message Response {
+  int64 result = 1;
+}
