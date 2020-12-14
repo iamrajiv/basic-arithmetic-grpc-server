@@ -1,4 +1,6 @@
 <div align="center">
+<img src="assets/basic-arithmetic-grpc-server.svg" width="400" />
+<br />
 <h1>Basic Arithmetic gRPC Server</h1>
 <p>
 Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
@@ -17,6 +19,8 @@ Folder structure:
 ├── LICENSE
 ├── Makefile
 ├── README.md
+├── assets
+│   └── basic-arithmetic-grpc-server.svg
 ├── buf.gen.yaml
 ├── buf.yaml
 ├── go.mod
