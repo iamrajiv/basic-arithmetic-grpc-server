@@ -16,7 +16,7 @@ A Basic Arithmetic gRPC server which uses gRPC-Gateway that reads protobuf servi
 
 Folder structure:
 
-```sh
+```shell
 .
 ├── LICENSE
 ├── Makefile
@@ -46,13 +46,13 @@ Before running this project install all the required Go packages by running the 
 
 Start the server using the command:
 
-```sh
+```shell
 $ go run main.go
 ```
 
 Then use cURL to send HTTP requests:
 
-```sh
+```shell
 $ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"a\": \"45\",  \"b\": \"2\"}"
 ```
 
