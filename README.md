@@ -56,8 +56,8 @@ Then use cURL to send HTTP requests:
 $ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"a\": \"15\",  \"b\": \"17\"}"
 ```
 
-```json
-{ "result": "32" }
+```
+{"result":"32"}
 ```
 
 ## License
