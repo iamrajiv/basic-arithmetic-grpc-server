@@ -53,11 +53,11 @@ $ go run main.go
 Then use cURL to send HTTP requests:
 
 ```shell
-$ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"a\": \"45\",  \"b\": \"2\"}"
+$ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"a\": \"15\",  \"b\": \"17\"}"
 ```
 
-```
-{"result":"47"}
+```json
+{ "result": "32" }
 ```
 
 ## License
