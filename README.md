@@ -12,7 +12,7 @@ Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 
 ## About Project
 
-A Basic Arithmetic gRPC server which uses gRPC-Gateway that reads protobuf service definitions & generates a reverse-proxy server. It performs four basic operation Addition, Division, Multiplication & Subtraction between two given integers.
+A Basic Arithmetic gRPC server which uses gRPC-Gateway that reads protobuf service definitions and generates a reverse-proxy server. It performs four basic operation Addition, Division, Multiplication and Subtraction between two given integers.
 
 Folder structure:
 
