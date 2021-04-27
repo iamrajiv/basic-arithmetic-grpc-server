@@ -1,8 +1,8 @@
-generate:
-	buf generate --path ./proto/arithmetic/arithmetic.proto
-
 clean:
 	rm proto/arithmetic/*.go
+
+generate:
+	buf generate --path ./proto/arithmetic/arithmetic.proto
 
 install:
 	go get \
