@@ -5,6 +5,9 @@
 <p>
 Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 </p>
+<a href="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server/?ref=repository-badge}" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server.svg/?label=active+issues&show_trend=true&token=Vc-DvUay896_FtzRBEq9x-Q8"/></a>
+<a href="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server/?ref=repository-badge}" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server.svg/?label=resolved+issues&show_trend=true&token=Vc-DvUay896_FtzRBEq9x-Q8"/></a>
+<br />
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/network/members"><img src="https://img.shields.io/github/forks/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/stargazers"><img src="https://img.shields.io/github/stars/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
