@@ -1,1 +1,0 @@
-web: bin/Basic-Arithmetic-gRPC-Server

@@ -13,8 +13,6 @@ import (
 )
 
 type server struct {
-	a      *pb.Request
-	b      *pb.Request
 	Result *pb.Response
 }
 
@@ -22,7 +20,7 @@ func NewServer() *server {
 	return &server{}
 }
 
-func (s *server) Add(ctx context.Context, request *pb.Request) (*pb.Response, error) {
+func (*server) Add(_ context.Context, request *pb.Request) (*pb.Response, error) {
 	a, b := request.GetA(), request.GetB()
 
 	result := a + b
@@ -30,7 +28,7 @@ func (s *server) Add(ctx context.Context, request *pb.Request) (*pb.Response, er
 	return &pb.Response{Result: result}, nil
 }
 
-func (s *server) Divide(ctx context.Context, request *pb.Request) (*pb.Response, error) {
+func (*server) Divide(_ context.Context, request *pb.Request) (*pb.Response, error) {
 	a, b := request.GetA(), request.GetB()
 
 	result := a / b
@@ -38,7 +36,7 @@ func (s *server) Divide(ctx context.Context, request *pb.Request) (*pb.Response,
 	return &pb.Response{Result: result}, nil
 }
 
-func (s *server) Multiply(ctx context.Context, request *pb.Request) (*pb.Response, error) {
+func (*server) Multiply(_ context.Context, request *pb.Request) (*pb.Response, error) {
 	a, b := request.GetA(), request.GetB()
 
 	result := a * b
@@ -46,7 +44,7 @@ func (s *server) Multiply(ctx context.Context, request *pb.Request) (*pb.Respons
 	return &pb.Response{Result: result}, nil
 }
 
-func (s *server) Subtract(ctx context.Context, request *pb.Request) (*pb.Response, error) {
+func (*server) Subtract(_ context.Context, request *pb.Request) (*pb.Response, error) {
 	a, b := request.GetA(), request.GetB()
 
 	result := a - b

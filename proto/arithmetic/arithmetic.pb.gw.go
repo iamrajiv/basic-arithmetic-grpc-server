@@ -179,7 +179,7 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Add")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Add", runtime.WithHTTPPathPattern("/v1/arithmetic/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -202,7 +202,7 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Divide")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Divide", runtime.WithHTTPPathPattern("/v1/arithmetic/div"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -225,7 +225,7 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Multiply")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Multiply", runtime.WithHTTPPathPattern("/v1/arithmetic/mul"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -248,7 +248,7 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Subtract")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/arithmetic.Arithmetic/Subtract", runtime.WithHTTPPathPattern("/v1/arithmetic/sub"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -310,7 +310,7 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Add")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Add", runtime.WithHTTPPathPattern("/v1/arithmetic/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -330,7 +330,7 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Divide")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Divide", runtime.WithHTTPPathPattern("/v1/arithmetic/div"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -350,7 +350,7 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Multiply")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Multiply", runtime.WithHTTPPathPattern("/v1/arithmetic/mul"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -370,7 +370,7 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Subtract")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/arithmetic.Arithmetic/Subtract", runtime.WithHTTPPathPattern("/v1/arithmetic/sub"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return

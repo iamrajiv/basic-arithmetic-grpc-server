@@ -11,6 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
+// Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
 // ArithmeticClient is the client API for Arithmetic service.
@@ -102,7 +103,7 @@ type UnsafeArithmeticServer interface {
 }
 
 func RegisterArithmeticServer(s grpc.ServiceRegistrar, srv ArithmeticServer) {
-	s.RegisterService(&_Arithmetic_serviceDesc, srv)
+	s.RegisterService(&Arithmetic_ServiceDesc, srv)
 }
 
 func _Arithmetic_Add_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -177,7 +178,10 @@ func _Arithmetic_Subtract_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Arithmetic_serviceDesc = grpc.ServiceDesc{
+// Arithmetic_ServiceDesc is the grpc.ServiceDesc for Arithmetic service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var Arithmetic_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "arithmetic.Arithmetic",
 	HandlerType: (*ArithmeticServer)(nil),
 	Methods: []grpc.MethodDesc{
