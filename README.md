@@ -10,7 +10,7 @@ Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 <br />
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/network/members"><img src="https://img.shields.io/github/forks/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/stargazers"><img src="https://img.shields.io/github/stars/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
-<a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
+<a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/main/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 </div>
 
 ## About Project
@@ -72,4 +72,4 @@ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: applicat
 
 ## License
 
-[MIT](https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/master/LICENSE)
+[MIT](https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/main/LICENSE)
