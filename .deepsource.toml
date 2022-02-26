@@ -12,5 +12,5 @@ name = "docker"
 enabled = true
 
 [[transformers]]
-name = "gofmt"
+name = "gofumpt"
 enabled = true
