@@ -43,6 +43,7 @@ I have added all the tutorials related to Hello World gRPC-Gateway to the [gRPC-
     │   ├── arithmetic.pb.go
     │   ├── arithmetic.pb.gw.go
     │   ├── arithmetic.proto
+    │   ├── arithmetic.swagger.json
     │   └── arithmetic_grpc.pb.go
     └── google
         └── api
@@ -69,6 +70,10 @@ curl -k  -X POST "http://localhost:8090/v1/arithmetic/add" -H  "accept: applicat
 ```shell
 {"result":"32"}
 ```
+
+## Swagger UI
+
+Link: [https://app.swaggerhub.com/apis/iamrajiv/Basic_Arithmetic_gRPC_Server/2](https://app.swaggerhub.com/apis/iamrajiv/Basic_Arithmetic_gRPC_Server/2)
 
 ## License
 
