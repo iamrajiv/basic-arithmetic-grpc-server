@@ -8,16 +8,13 @@ import (
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 
 	pb "github.com/iamrajiv/basic-arithmetic-grpc-server/proto/arithmetic"
 )
 
 type server struct {
 	Result *pb.Response
-}
-
-func NewServer() *server {
-	return &server{}
 }
 
 func (*server) Add(_ context.Context, request *pb.Request) (*pb.Response, error) {
@@ -75,7 +72,7 @@ func main() {
 		context.Background(),
 		"0.0.0.0:8080",
 		grpc.WithBlock(),
-		grpc.WithInsecure(),
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
 	if err != nil {
 		log.Fatalln("Failed to dial server:", err)
