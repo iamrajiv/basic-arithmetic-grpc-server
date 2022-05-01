@@ -1,4 +1,5 @@
 FROM golang:alpine AS builder
+RUN apk add --no-cache git
 
 # Set necessary environmet variables needed for our image
 ENV GO111MODULE=on \
@@ -9,11 +10,10 @@ ENV GO111MODULE=on \
 # Move to work directory /build
 WORKDIR /build
 
-# Copy and download dependencies
+# Copy and download dependency using go mod
 COPY go.mod .
 COPY go.sum .
 RUN go mod download
-RUN apk add git
 
 # Copy the code into the container
 COPY . .
