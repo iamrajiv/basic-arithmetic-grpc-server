@@ -9,10 +9,11 @@ ENV GO111MODULE=on \
 # Move to work directory /build
 WORKDIR /build
 
-# Copy and download dependency using go mod
+# Copy and download dependencies
 COPY go.mod .
 COPY go.sum .
 RUN go mod download
+RUN apk add git
 
 # Copy the code into the container
 COPY . .
