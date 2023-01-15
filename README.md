@@ -13,7 +13,7 @@ Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/main/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 </div>
 
-## About Project
+## About
 
 A Basic Arithmetic gRPC server that uses gRPC-Gateway and reads protobuf service definitions and generates a reverse-proxy server. It performs four basic operations Addition, Division, Multiplication, and Subtraction between two given integers.
 
