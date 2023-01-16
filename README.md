@@ -5,9 +5,6 @@
 <p>
 Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 </p>
-<a href="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server/?ref=repository-badge}" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server.svg/?label=active+issues&show_trend=true&token=Vc-DvUay896_FtzRBEq9x-Q8"/></a>
-<a href="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server/?ref=repository-badge}" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/iamrajiv/basic-arithmetic-grpc-server.svg/?label=resolved+issues&show_trend=true&token=Vc-DvUay896_FtzRBEq9x-Q8"/></a>
-<br />
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/network/members"><img src="https://img.shields.io/github/forks/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/stargazers"><img src="https://img.shields.io/github/stars/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
 <a href="https://github.com/iamrajiv/basic-arithmetic-grpc-server/blob/main/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/basic-arithmetic-grpc-server?color=0969da&style=for-the-badge" height="auto" width="auto" /></a>
@@ -15,7 +12,7 @@ Simple Basic Arithmetic gRPC Server which uses gRPC-Gateway
 
 ## About
 
-A Basic Arithmetic gRPC server that uses gRPC-Gateway and reads protobuf service definitions and generates a reverse-proxy server. It performs four basic operations Addition, Division, Multiplication, and Subtraction between two given integers.
+This project is a gRPC server that utilizes gRPC-Gateway to generate a reverse-proxy server. It utilizes protobuf service definitions and allows for four basic arithmetic operations: addition, division, multiplication, and subtraction between two given integers.
 
 To get more references about gRPC-Gateway check out [Hello World gRPC-Gateway](https://github.com/iamrajiv/helloworld-grpc-gateway).
 
