@@ -24,12 +24,14 @@ import (
 )
 
 // Suppress "imported and not used" errors
-var _ codes.Code
-var _ io.Reader
-var _ status.Status
-var _ = runtime.String
-var _ = utilities.NewDoubleArray
-var _ = metadata.Join
+var (
+	_ codes.Code
+	_ io.Reader
+	_ status.Status
+	_ = runtime.String
+	_ = utilities.NewDoubleArray
+	_ = metadata.Join
+)
 
 func request_Arithmetic_Add_0(ctx context.Context, marshaler runtime.Marshaler, client ArithmeticClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Request
@@ -45,7 +47,6 @@ func request_Arithmetic_Add_0(ctx context.Context, marshaler runtime.Marshaler, 
 
 	msg, err := client.Add(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func local_request_Arithmetic_Add_0(ctx context.Context, marshaler runtime.Marshaler, server ArithmeticServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -62,7 +63,6 @@ func local_request_Arithmetic_Add_0(ctx context.Context, marshaler runtime.Marsh
 
 	msg, err := server.Add(ctx, &protoReq)
 	return msg, metadata, err
-
 }
 
 func request_Arithmetic_Divide_0(ctx context.Context, marshaler runtime.Marshaler, client ArithmeticClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -79,7 +79,6 @@ func request_Arithmetic_Divide_0(ctx context.Context, marshaler runtime.Marshale
 
 	msg, err := client.Divide(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func local_request_Arithmetic_Divide_0(ctx context.Context, marshaler runtime.Marshaler, server ArithmeticServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -96,7 +95,6 @@ func local_request_Arithmetic_Divide_0(ctx context.Context, marshaler runtime.Ma
 
 	msg, err := server.Divide(ctx, &protoReq)
 	return msg, metadata, err
-
 }
 
 func request_Arithmetic_Multiply_0(ctx context.Context, marshaler runtime.Marshaler, client ArithmeticClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -113,7 +111,6 @@ func request_Arithmetic_Multiply_0(ctx context.Context, marshaler runtime.Marsha
 
 	msg, err := client.Multiply(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func local_request_Arithmetic_Multiply_0(ctx context.Context, marshaler runtime.Marshaler, server ArithmeticServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -130,7 +127,6 @@ func local_request_Arithmetic_Multiply_0(ctx context.Context, marshaler runtime.
 
 	msg, err := server.Multiply(ctx, &protoReq)
 	return msg, metadata, err
-
 }
 
 func request_Arithmetic_Subtract_0(ctx context.Context, marshaler runtime.Marshaler, client ArithmeticClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -147,7 +143,6 @@ func request_Arithmetic_Subtract_0(ctx context.Context, marshaler runtime.Marsha
 
 	msg, err := client.Subtract(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func local_request_Arithmetic_Subtract_0(ctx context.Context, marshaler runtime.Marshaler, server ArithmeticServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -164,7 +159,6 @@ func local_request_Arithmetic_Subtract_0(ctx context.Context, marshaler runtime.
 
 	msg, err := server.Subtract(ctx, &protoReq)
 	return msg, metadata, err
-
 }
 
 // RegisterArithmeticHandlerServer registers the http handlers for service Arithmetic to "mux".
@@ -172,7 +166,6 @@ func local_request_Arithmetic_Subtract_0(ctx context.Context, marshaler runtime.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
 // Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterArithmeticHandlerFromEndpoint instead.
 func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux, server ArithmeticServer) error {
-
 	mux.Handle("POST", pattern_Arithmetic_Add_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -193,7 +186,6 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Add_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Divide_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -216,7 +208,6 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Divide_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Multiply_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -239,7 +230,6 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Multiply_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Subtract_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -262,7 +252,6 @@ func RegisterArithmeticHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Subtract_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	return nil
@@ -305,7 +294,6 @@ func RegisterArithmeticHandler(ctx context.Context, mux *runtime.ServeMux, conn 
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
 // "ArithmeticClient" to call the correct interceptors.
 func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux, client ArithmeticClient) error {
-
 	mux.Handle("POST", pattern_Arithmetic_Add_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -323,7 +311,6 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Add_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Divide_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -343,7 +330,6 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Divide_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Multiply_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -363,7 +349,6 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Multiply_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Arithmetic_Subtract_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -383,7 +368,6 @@ func RegisterArithmeticHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		}
 
 		forward_Arithmetic_Subtract_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	return nil

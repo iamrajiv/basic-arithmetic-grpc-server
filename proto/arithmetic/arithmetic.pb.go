@@ -7,11 +7,12 @@
 package arithmetic
 
 import (
+	reflect "reflect"
+	sync "sync"
+
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -178,11 +179,13 @@ func file_arithmetic_arithmetic_proto_rawDescGZIP() []byte {
 	return file_arithmetic_arithmetic_proto_rawDescData
 }
 
-var file_arithmetic_arithmetic_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_arithmetic_arithmetic_proto_goTypes = []interface{}{
-	(*Request)(nil),  // 0: arithmetic.Request
-	(*Response)(nil), // 1: arithmetic.Response
-}
+var (
+	file_arithmetic_arithmetic_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+	file_arithmetic_arithmetic_proto_goTypes  = []interface{}{
+		(*Request)(nil),  // 0: arithmetic.Request
+		(*Response)(nil), // 1: arithmetic.Response
+	}
+)
 var file_arithmetic_arithmetic_proto_depIdxs = []int32{
 	0, // 0: arithmetic.Arithmetic.Add:input_type -> arithmetic.Request
 	0, // 1: arithmetic.Arithmetic.Divide:input_type -> arithmetic.Request

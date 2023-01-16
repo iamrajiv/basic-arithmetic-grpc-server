@@ -8,6 +8,7 @@ package arithmetic
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -83,18 +84,20 @@ type ArithmeticServer interface {
 }
 
 // UnimplementedArithmeticServer should be embedded to have forward compatible implementations.
-type UnimplementedArithmeticServer struct {
-}
+type UnimplementedArithmeticServer struct{}
 
 func (UnimplementedArithmeticServer) Add(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Add not implemented")
 }
+
 func (UnimplementedArithmeticServer) Divide(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Divide not implemented")
 }
+
 func (UnimplementedArithmeticServer) Multiply(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Multiply not implemented")
 }
+
 func (UnimplementedArithmeticServer) Subtract(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Subtract not implemented")
 }
