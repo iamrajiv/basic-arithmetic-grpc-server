@@ -6,6 +6,8 @@ import (
 	"net"
 	"net/http"
 
+	"google.golang.org/grpc/codes"
+
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -27,6 +29,10 @@ func (*server) Add(_ context.Context, request *pb.Request) (*pb.Response, error)
 
 func (*server) Divide(_ context.Context, request *pb.Request) (*pb.Response, error) {
 	a, b := request.GetA(), request.GetB()
+
+	if b == 0 {
+		return nil, grpc.Errorf(codes.InvalidArgument, "Division by zero error")
+	}
 
 	result := a / b
 
