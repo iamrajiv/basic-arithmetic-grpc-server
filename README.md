@@ -18,7 +18,7 @@ For additional resources on gRPC-Gateway, take a look at [Hello World gRPC-Gatew
 
 All the tutorials related to Hello World gRPC-Gateway have been added to the [gRPC-Gateway documentation website](https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/).
 
-#### Folder structure:
+The folder structure of the project is as follows:
 
 ```shell
 .
